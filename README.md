@@ -34,8 +34,41 @@ This will be passing the mapping area and since every address starts with a u en
 in the mint section, you'll have to do an address and a value that pertains the function that increases the total supply by that number and increases the balance of the address by that amount. Since it has a parameter should have an address and a value (in which i did underscore address and underscore value (_address, _value) to differenciate the parameters into the normal values) and starting with mapping the variable (making the Address => uint as your public balances) uint is simply an unsigned int that doesn't go by negative and also doesn't contribute anything therefore being a zero (0) value towards the public variables stated in the code.
 recalling from above being a public so it's easier to work with when giving it value, when it's pertaining in real life you would never make it public, knowing the dangers!
 
+
 // mint function
     function mint (address _address, uint _value) public {
         totalSupply += _value;
         balances [_address] += _value;
      }
+
+     in the second one we would need to do the burn and minting function which is basically the same except using the functions of '+=' on the mint function
+
+in the mint function this will be the increasing of total supply by the amount of that's already passed by using the total supply and balances (with calling the _address and adding the value altgoether) and the address being increased by the balances together with the value.
+
+// burn function
+    function burn (address _address, uint _value) public {
+        if (balances [_address ] >= _value) {
+
+        totalSupply -= _value;
+        balances [_address] -= _value;
+        }
+        
+    }
+    recalling from above being a public so it's easier to work with when giving it value, when it's pertaining in real life you would never make it public, knowing the dangers!
+The burn function is the inverse of the mint function in that it destroys tokens (much like the mint function, it will accept an address in value) and eliminates the complete supply and balance from the address entirely. Copy and paste the same function, but execute it in the reverse direction by using the subtraction sign while the plus symbol is beneath it, and voilà! You have now received the burn function, which effectively destroys your token!
+
+You'll be utilizing the inverse, '-=' (A quick reminder that any negative integer, such as -1, will never be called in this part, thus the value will always be 0 or above.)
+
+
+Finally, when the burn function is used, you
+
+# Running the Code
+4th thing you'll need to do is deploy and run tab which is located below at the solidity compiler button. with it opening, you'll see the orange button that says deploy which grants you to see if your token is available or not. You'll have to test the waters a.k.a the tokens(abbrv, name, and total supply buttons) within the 'deployed contracts'
+
+lastly and most importantly youll need to copy your account which is directed at the depoly and run transactions and copy paste it and opening the mint and burn below the deployed contracts. Giving them value (equal or greater than the one you're burning) and pasting the account numbers you just got and putting them into the address section and giving value to the value section. When ran by the token abbrv it will give the certain amount of you just did (500 for example to the mint function that will call out and give you 500 tokens as an example) and giving it the total supply of also 500. the same with Burn section, same sequence different number (1000 for example, it will burn the 1k you just gotten to the burn function) and testing it with the totalsupply section and the token abbrv and you're done! that's the whole sequence of mytoken!
+
+# Advice
+Any advice can ask @ the discord with Ming/Faith as my guide!
+
+# Authors
+Jalandoni, Diosel lei
