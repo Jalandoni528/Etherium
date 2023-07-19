@@ -1,3 +1,4 @@
-# Etherium
-This project is about adding tokens to the specific address, you can check the remaining balace
-deduct tokens from the address (burning). You should have conditionals, the balance of the sender must be equal or greater than to the supposed amount that will be burn.
+# ETHAssessment 
+This program initializes the very core of using solidity assessment and that is creating a token between all those modules accumulated into one.
+# Description
+This is a special program that certifies as something evolutionary throughout decades to come and this will be able to help us navigate through the blockchain Ethereum. And by doing so in a most conventional way; Through the world of coding! this serves as a testament that blockchain is the stepping stone beyond the horizon.
